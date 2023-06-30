@@ -12,8 +12,8 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 X_train.head()
 
 
-SVM = SVC(max_iter=1000)
-SVM.fit(X_train,y_train)
+model = SVC(max_iter=1000)
+model.fit(X_train,y_train)
 
 pickle.dump(SVM, open('model.pkl', 'wb'))
 
