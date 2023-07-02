@@ -15,7 +15,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 
 X_train.head()
 
-SVM = SVC(max_iter=1000)
+SVM = SVC()
 model = GridSearchCV(estimator=SVM, param_grid = param_grid,  param_grid, refit=True,cv=10, n_jobs=-1, verbose=3)
 model.fit(X_train,y_train)
 
