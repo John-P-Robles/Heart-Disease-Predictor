@@ -8,6 +8,7 @@ param_grid = {
     'C': [15],
     'gamma': [2],
     'kernel': ['rbf'],
+    'class_weight':['balanced',None]
 }
 X = df.drop(['10-year_risk'], axis=1)
 y = df['10-year_risk']
