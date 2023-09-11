@@ -16,7 +16,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 X_train.head()
 
 RFC = RandomForestClassifier()
-model = GridSearchCV(estimator=RFC, param_grid = param_grid,  param_grid,cv=15, n_jobs=-1, verbose=3)
+model = GridSearchCV(estimator=RFC, param_grid = param_grid,cv=15, n_jobs=-1, verbose=3)
 model.fit(X_train,y_train)
 
 pickle.dump(model, open('model.pkl', 'wb'))
