@@ -19,7 +19,7 @@ RFC = RandomForestClassifier()
 model = GridSearchCV(estimator=RFC, param_grid = param_grid,cv=15, n_jobs=-1, verbose=3)
 model.fit(X_train,y_train)
 
-pickle.dump(model, open('model.pkl', 'wb'))
+pickle.dump(RFC, open('model.pkl', 'wb'))
 
 
 
