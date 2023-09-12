@@ -19,12 +19,12 @@ def predict():
     prediction = model.predict(final_features)
     if prediction == 1:
         return render_template('index.html',
-                               prediction_text='High chance of patient having heart disease in 10-years'.format(
+                               prediction_text='High chance of heart disease in 10-years'.format(
                                    prediction),
                                )
     else:
         return render_template('index.html',
-                               prediction_text='Low chance of patient having heart disease in 10-years'.format(
+                               prediction_text='Low chance of heart disease in 10-years'.format(
                                    prediction),
                                )
 
