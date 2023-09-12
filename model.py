@@ -9,7 +9,7 @@ param_grid = {
     'n_estimators': [90,100,110,120,130],
     'min_samples_split': [6,8,10,12,14],
 }
-X = df.drop([['10-year_risk','Unnamed: 0']], axis=1)
+X = df.drop(['10-year_risk','Unnamed: 0'], axis=1)
 y = df['10-year_risk']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
