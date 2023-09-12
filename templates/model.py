@@ -13,6 +13,7 @@ X_train.head()
 
 
 SVM = SVC(max_iter=1000)
-SVM.fit(X_train,y_train)
+model = GridSearchCV(estimator=SVM, param_grid = param_grid,  param_grid, refit=True,cv=10, n_jobs=-1, verbose=3)
+model.fit(X_train,y_train)
 
-pickle.dump(SVM, open('model.pkl', 'wb'))
+pickle.dump(model, open('model.pkl', 'wb'))
