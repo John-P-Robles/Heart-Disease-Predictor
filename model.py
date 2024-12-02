@@ -1,6 +1,6 @@
 import pandas as pd
 from sklearn.model_selection import GridSearchCV
-df = pd.read_csv('norm_CHD.csv')
+df = pd.read_csv('data_scaled.csv')
 from sklearn.model_selection import train_test_split 
 from sklearn.ensemble import RandomForestClassifier
 import pickle
