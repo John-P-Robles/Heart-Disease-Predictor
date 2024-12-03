@@ -6,8 +6,8 @@ from sklearn.ensemble import RandomForestClassifier
 import pickle
 param_grid = {
     'max_depth': [10,20,30,40,50],
-    'n_estimators': [90,100,110,120,130],
-    'min_samples_split': [6,8,10,12,14],
+    'n_estimators': [110,120,130, 140, 150],
+    'min_samples_split': [6,8,10,12,14,16],
 }
 X = df.drop(['10-year_risk','Unnamed: 0'], axis=1)
 y = df['10-year_risk']
