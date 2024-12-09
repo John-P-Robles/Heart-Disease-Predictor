@@ -19,7 +19,7 @@ def predict():
     threshold = 0.5  # You may need to adjust this
     
     if prediction_probability > threshold:
-        risk_level = 'High'
+        risk_level = 'High*'
     else:
         risk_level = 'Low'
     
