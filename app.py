@@ -17,7 +17,7 @@ def predict():
     int_features = [float(x) for x in request.form.values()]
     final_features = [np.array(int_features)]
     prediction = model.predict(final_features)
-    if prediction == 1:
+    if prediction > .5:
         return render_template('index.html',
                                prediction_text='High chance of heart disease in 10-years'.format(
                                    prediction),
